@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Welcome from './components/Welcome';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero'; // This import is correct
+import Hero from './components/Hero'; 
+import Contact from './components/Contact';
+
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -40,6 +42,7 @@ function App() {
       <Navbar />
 
       <Hero />
+      <Contact />
 
 
 
