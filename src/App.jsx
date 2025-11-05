@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Welcome from './components/Welcome';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero'; // This import is correct
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -11,15 +13,13 @@ function App() {
 
   useEffect(() => {
     if (isFading) {
-
       const timer = setTimeout(() => {
         setShowWelcome(false);
-      }, 500); 
+      }, 500);
 
       return () => clearTimeout(timer);
     }
   }, [isFading]);
-
 
   if (showWelcome) {
     return (
@@ -33,11 +33,16 @@ function App() {
 
 
   return (
-    <div className="bg-gray-900 min-h-screen flex items-center justify-center transition-opacity duration-500 opacity-100">
-      <h1 className="text-4xl font-bold text-white">
-        My Main Portfolio!
-      </h1>
-      {/* Navbar, Hero, Projects, etc. */}
+  
+    <div className="bg-dark-bg text-light-text font-sans transition-opacity duration-500 opacity-100">
+      
+
+      <Navbar />
+
+      <Hero />
+
+
+
     </div>
   );
 }
