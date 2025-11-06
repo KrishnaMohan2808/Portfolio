@@ -65,7 +65,7 @@ function Hero() {
               {'\n  '}<span className="text-green-300">school</span>: <span className="text-orange-300">'Kendriya Vidyalaya Ottapalam'</span>,
               {'\n  '}<span className="text-green-300">likes</span>: <span className="text-gray-400">[</span>
               {'\n    '}<span className="text-orange-300">'New Challenges'</span>,
-              {'\n    '}<span className="text-orange-300">'Getting hands dirty'</span>
+              {'\n    '}<span className="text-orange-300">'Watching sky'</span>
               {'\n  '}<span className="text-gray-400">]</span>
               {'\n}'};
             </code>
