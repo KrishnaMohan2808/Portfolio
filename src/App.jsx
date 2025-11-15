@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
 import AnimatedSection from './components/AnimatedSection';
+import About from './components/About';
 
 
 function App() {
@@ -45,6 +46,10 @@ return (
         <Hero />
       </AnimatedSection>
 
+      <AnimatedSection>
+        <About />
+      </AnimatedSection>
+
     
       <AnimatedSection>
         <Projects />
@@ -53,6 +58,10 @@ return (
       <AnimatedSection>
         <Contact />
       </AnimatedSection>
+
+
+
+
       
     </div>
   );

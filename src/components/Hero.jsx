@@ -38,8 +38,8 @@ function Hero() {
      
         <p className="text-lg md:text-xl text-light-text mt-4 max-w-xl">
           By degree, I'm an electronics engineer. By nature, I'm an experimenter.
-          I love to take on new challenges, get my hands dirty, and build things 
-          from the ground up—whether it's hardware or software.
+          I love to take on new challenges, get my hands dirty, and learn new things 
+          from the ground up.
         </p>
 
         <a 
