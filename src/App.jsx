@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import AnimatedSection from './components/AnimatedSection';
 import About from './components/About';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -58,6 +59,8 @@ return (
       <AnimatedSection>
         <Contact />
       </AnimatedSection>
+
+      <Footer />
 
 
 
