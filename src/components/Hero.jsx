@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-// Custom Hook for Typewriter Effect (No external dependency needed)
+
 const useTypewriter = (phrases, typeSpeed = 100, deleteSpeed = 50, pauseDuration = 1500) => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -15,17 +15,17 @@ const useTypewriter = (phrases, typeSpeed = 100, deleteSpeed = 50, pauseDuration
 
       setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1));
 
-      // Determine typing speed
+     
       setTypingSpeed(isDeleting ? deleteSpeed : typeSpeed);
 
-      // If word is complete
+   
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), pauseDuration);
-        setTypingSpeed(pauseDuration); // Pause at end
+        setTypingSpeed(pauseDuration); 
       } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
-        setTypingSpeed(500); // Pause before new word
+        setTypingSpeed(500); 
       }
     };
 
@@ -49,7 +49,7 @@ function Hero() {
   return (
     <section className="container mx-auto min-h-screen flex flex-col-reverse md:flex-row items-center justify-center p-6 md:p-10">
       
-      {/* Left Column: Text Intro */}
+     
       <div className="w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0">
         <motion.div 
           initial={{ opacity: 0, x: -20 }} 
@@ -86,7 +86,7 @@ function Hero() {
         </motion.div>
       </div>
 
-      {/* Right Column: Profile Photo */}
+    
       <div className="w-full md:w-1/2 flex justify-center md:justify-end p-4">
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
@@ -94,20 +94,17 @@ function Hero() {
           transition={{ duration: 0.5 }}
           className="relative group"
         >
-            {/* TODO: REPLACE THIS IMAGE SOURCE 
-               1. Put your photo in the 'public' folder and name it 'profile.jpg'
-               2. Or change the src below to your specific path
-            */}
+    
             <div className="w-64 h-64 md:w-80 md:h-80 relative">
-                {/* Decorative border ring */}
+              
                 <div className="absolute inset-0 rounded-full border-4 border-[#4ade80] opacity-80 group-hover:scale-105 transition-transform duration-300"></div>
                 
-                {/* The Image */}
+               
                 <img 
                     src="/profile.jpg" 
                     alt="Krishna Mohan" 
                     className="w-full h-full object-cover rounded-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500 border-4 border-[#0d1117]"
-                    // Fallback if image not found
+                    
                     onError={(e) => {e.target.src = 'https://placehold.co/400x400/161b22/39d353?text=KM'}}
                 />
             </div>

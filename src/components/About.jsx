@@ -25,19 +25,17 @@ function About() {
   return (
     <section id="about" className="container mx-auto p-4 py-16">
 
-      {/* Title */}
       <h2 className="text-4xl font-bold font-mono text-center text-accent mb-8">
         // About Me
       </h2>
 
-      {/* Bottom Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-        {/* Left Column: Profile Code Block */}
+    
         <div className="order-2 lg:order-1 w-full transform hover:-translate-y-1 transition-transform duration-300">
           <div className="bg-[#161b22] rounded-lg border border-[#30363d] shadow-xl overflow-hidden font-mono text-sm md:text-base">
 
-            {/* Fake Window Header */}
+   
             <div className="bg-[#0d1117] px-4 py-2 border-b border-[#30363d] flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
               <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
@@ -45,7 +43,7 @@ function About() {
               <span className="ml-2 text-xs text-[#8b949e]">profile.js</span>
             </div>
 
-            {/* Code Content */}
+       
             <div className="p-6 overflow-x-auto">
               <pre>
                 <code className="text-[#e6edf3]">
@@ -64,11 +62,10 @@ function About() {
           </div>
         </div>
 
-        {/* Right Column: Toolkit */}
+    
         <div className="order-1 lg:order-2 w-full transform hover:-translate-y-1 transition-transform duration-300">
           <div className="bg-[#161b22] rounded-lg border border-[#30363d] shadow-xl overflow-hidden font-mono text-sm md:text-base">
 
-            {/* Fake Window Header */}
             <div className="bg-[#0d1117] px-4 py-2 border-b border-[#30363d] flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
               <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
@@ -76,7 +73,6 @@ function About() {
               <span className="ml-2 text-xs text-[#8b949e]">toolkit.js</span>
             </div>
 
-            {/* Toolkit Code */}
             <div className="p-6 overflow-x-auto">
               <pre>
                 <code className="text-[#e6edf3]">

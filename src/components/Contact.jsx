@@ -23,7 +23,7 @@ function Contact() {
   method="POST"
   className="flex flex-col gap-4"
 >
-  {/* Hidden config */}
+
   <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_template" value="box" />
   <input 
@@ -92,7 +92,7 @@ function Contact() {
             <FaEnvelope size={32} />
           </a>
           <a 
-            href="https://krishnaawrites.medium.com" // Change this
+            href="https://krishnaawrites.medium.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-accent transition-colors duration-300"
@@ -100,7 +100,7 @@ function Contact() {
             <FaMedium size={32} />
           </a>
           <a 
-            href="https://leetcode.com/u/i_krishna/" // Change this
+            href="https://leetcode.com/u/i_krishna/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-accent transition-colors duration-300"
@@ -108,7 +108,7 @@ function Contact() {
             <SiLeetcode size={32} />
           </a>
           <a 
-            href="https://huggingface.co/krishnamohan2808" // Change this
+            href="https://huggingface.co/krishnamohan2808"
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-accent transition-colors duration-300"

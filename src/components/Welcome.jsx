@@ -28,7 +28,7 @@ function Welcome({ onComplete }) {
   return (
     <div className="bg-black text-gray-300 min-h-screen p-4 flex flex-col justify-center items-center font-mono">
       <div className="w-full max-w-lg">
-        {/* The typing animation */}
+     
         <TypeAnimation
           sequence={[
             'Initializing portfolio...',
@@ -47,7 +47,7 @@ function Welcome({ onComplete }) {
           style={{ whiteSpace: 'pre-line', fontSize: '1.2em' }}
         />
 
-        {/* The error message */}
+  
         {showError && (
           <div className="text-red-500 mt-2">
             <p>command not found: "{typedCommand || ' '}"</p>
@@ -55,7 +55,7 @@ function Welcome({ onComplete }) {
           </div>
         )}
 
-        {/* The terminal input form */}
+     
         <form onSubmit={handleSubmit} className="mt-4 flex items-center">
           <span className="text-green-400 mr-2">$</span>
           <input

@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="relative bg-dark-bg border-t border-gray-700 py-6 mt-10">
 
-      {/* Animated top gradient line */}
+     
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent via-accent-hover to-accent animate-gradient-x"></div>
 
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
