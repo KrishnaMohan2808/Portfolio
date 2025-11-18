@@ -47,10 +47,10 @@ function Hero() {
   );
 
   return (
-    <section className="container mx-auto min-h-screen flex flex-col-reverse md:flex-row items-center justify-center p-6 md:p-12">
+    <section className="container mx-auto min-h-screen flex flex-col-reverse md:flex-row items-center justify-center p-6 md:p-10">
       
       {/* Left Column: Text Intro */}
-      <div className="w-full md:w-3/5 text-center md:text-left mt-8 md:mt-0">
+      <div className="w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0">
         <motion.div 
           initial={{ opacity: 0, x: -20 }} 
           animate={{ opacity: 1, x: 0 }} 
@@ -87,7 +87,7 @@ function Hero() {
       </div>
 
       {/* Right Column: Profile Photo */}
-      <div className="w-full md:w-2/5 flex justify-center md:justify-end p-4">
+      <div className="w-full md:w-1/2 flex justify-center md:justify-end p-4">
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
