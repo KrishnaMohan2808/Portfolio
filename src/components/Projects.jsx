@@ -37,7 +37,7 @@ const projectData = [
     title: "Maitri: Community Hub",
     description: "A full-stack, real-time geospatial platform designed to connect neighbors. Enables interactive issue reporting on live maps, mutual aid requests, and user-organized community cleanup events.",
     tags: ["React", "Supabase", "Leaflet", "Tailwind"],
-    liveLink: "community-hub-delta-ten.vercel.app",
+    liveLink: "https://maitri-community-hub.vercel.app/",
     repoLink: "https://github.com/KrishnaMohan2808/community-hub",
     isPrivate: false
   },

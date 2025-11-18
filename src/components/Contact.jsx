@@ -18,46 +18,56 @@ function Contact() {
           Feel free to send me a message!
         </p>
 
-        <form 
-          action="YOUR_FORM_ACTION_URL" 
-          method="POST" 
-          className="flex flex-col gap-4"
-        >
-          <input 
-            type="text" 
-            name="name" 
-            placeholder="Your Name" 
-            required 
-            className="p-3 bg-gray-800 border border-gray-700 rounded-md text-light-text focus:outline-none focus:border-accent"
-          />
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Your Email" 
-            required 
-            className="p-3 bg-gray-800 border border-gray-700 rounded-md text-light-text focus:outline-none focus:border-accent"
-          />
-          <textarea 
-            name="message" 
-            rows="5" 
-            placeholder="Your Message" 
-            required 
-            className="p-3 bg-gray-800 border border-gray-700 rounded-md text-light-text focus:outline-none focus:border-accent"
-          ></textarea>
-          
-     
-          <button 
-            type="submit" 
-            className="p-3 bg-transparent border-2 border-accent text-accent 
-                       font-mono font-bold text-lg 
-                       hover:bg-accent hover:text-dark-bg 
-                       transition-colors duration-300 rounded-md"
-          >
-            Send Message
-          </button>
-        </form>
+ <form 
+  action="https://formsubmit.co/krishnamohan2808@gmail.com" 
+  method="POST"
+  className="flex flex-col gap-4"
+>
+  {/* Hidden config */}
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="box" />
+  <input 
+    type="hidden" 
+    name="_subject" 
+    value="New Message From Portfolio Contact Form!" 
+  />
+  <input type="hidden" name="_next" value="http://localhost:5173/#contact" />
 
-   
+
+
+  <input 
+    type="text" 
+    name="name" 
+    placeholder="Your Name" 
+    required 
+    className="p-3 bg-gray-800 border border-gray-700 rounded-md text-light-text focus:outline-none focus:border-accent"
+  />
+  <input 
+    type="email" 
+    name="email" 
+    placeholder="Your Email" 
+    required 
+    className="p-3 bg-gray-800 border border-gray-700 rounded-md text-light-text focus:outline-none focus:border-accent"
+  />
+  <textarea 
+    name="message" 
+    rows="5" 
+    placeholder="Your Message" 
+    required 
+    className="p-3 bg-gray-800 border border-gray-700 rounded-md text-light-text focus:outline-none focus:border-accent"
+  ></textarea>
+
+  <button 
+    type="submit" 
+    className="p-3 bg-transparent border-2 border-accent text-accent 
+               font-mono font-bold text-lg 
+               hover:bg-accent hover:text-dark-bg 
+               transition-colors duration-300 rounded-md"
+  >
+    Send Message
+  </button>
+</form>
+
         <div className="flex justify-center gap-8 mt-12">
           <a 
             href="https://github.com/KrishnaMohan2808" 
