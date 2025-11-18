@@ -1,79 +1,120 @@
-import React from 'react';
-import { TypeAnimation } from 'react-type-animation';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+// Custom Hook for Typewriter Effect (No external dependency needed)
+const useTypewriter = (phrases, typeSpeed = 100, deleteSpeed = 50, pauseDuration = 1500) => {
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(typeSpeed);
+
+  useEffect(() => {
+    const handleType = () => {
+      const i = loopNum % phrases.length;
+      const fullText = phrases[i];
+
+      setText(isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1));
+
+      // Determine typing speed
+      setTypingSpeed(isDeleting ? deleteSpeed : typeSpeed);
+
+      // If word is complete
+      if (!isDeleting && text === fullText) {
+        setTimeout(() => setIsDeleting(true), pauseDuration);
+        setTypingSpeed(pauseDuration); // Pause at end
+      } else if (isDeleting && text === '') {
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setTypingSpeed(500); // Pause before new word
+      }
+    };
+
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed, phrases, typeSpeed, deleteSpeed, pauseDuration]);
+
+  return text;
+};
 
 function Hero() {
+  const typingText = useTypewriter(
+    [
+      "I'm an Electronics Engineer.",
+      "I'm a hands-on Experimenter.",
+      "I'm a problem-solver.",
+      "I build things that may or may not work.",
+    ]
+  );
+
   return (
-    <div className="container mx-auto min-h-screen flex flex-col md:flex-row items-center justify-center p-4">
+    <section className="container mx-auto min-h-screen flex flex-col-reverse md:flex-row items-center justify-center p-6 md:p-12">
       
-   
-      <div className="md:w-3/5 text-center md:text-left">
-        <h2 className="text-xl md:text-2xl font-mono text-accent">
-          Hi, my name is
-        </h2>
-        
-        <h1 className="text-5xl md:text-7xl font-bold text-light-text my-2">
-          [Krishna Mohan]
-        </h1>
-        
-   
-        <div className="text-2xl md:text-4xl font-bold font-mono text-gray-400">
-          <TypeAnimation
-            sequence={[
-              "I'm an Electronics Engineer.",
-              1500,
-              "I'm a hands-on Experimenter.",
-              1500,
-              "I'm a problem-solver.",
-              1500,
-              "I build things that may or may not work.",
-              1500,
-            ]}
-            wrapper="span"
-            cursor={true}
-            repeat={Infinity}
-            speed={50}
-          />
-        </div>
-
-     
-        <p className="text-lg md:text-xl text-light-text mt-4 max-w-xl">
-          By degree, I'm an electronics engineer. By nature, I'm an experimenter.
-          I love to take on new challenges, get my hands dirty, and learn new things 
-          from the ground up.
-        </p>
-
-        <a 
-          href="#projects" 
-          className="inline-block mt-8 px-6 py-3 bg-transparent border-2 border-accent text-accent 
-                     font-mono font-bold text-lg 
-                     hover:bg-accent hover:text-dark-bg 
-                     transition-colors duration-300"
+      {/* Left Column: Text Intro */}
+      <div className="w-full md:w-3/5 text-center md:text-left mt-8 md:mt-0">
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }} 
+          animate={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.5 }}
         >
-          View My Work
-        </a>
+          <h2 className="text-xl md:text-2xl font-mono text-[#4ade80] mb-4">
+            Hi, my name is
+          </h2>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-[#4ade80] mb-4 tracking-tight">
+            KRISHNA MOHAN
+          </h1>
+          
+          <div className="text-xl md:text-3xl font-bold font-mono text-[#8b949e] h-20 md:h-auto flex items-center justify-center md:justify-start">
+            <span>{typingText}</span>
+            <span className="animate-pulse ml-1">|</span>
+          </div>
+
+          <p className="text-lg text-[#8b949e] mt-6 max-w-xl mx-auto md:mx-0 leading-relaxed">
+            By degree, I'm an electronics engineer. By nature, I'm an experimenter.
+            I love to take on new challenges, get my hands dirty, and learn new things 
+            from the ground up.
+          </p>
+
+          <motion.a 
+            href="#projects" 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block mt-10 px-8 py-4 bg-transparent border-2 border-[#4ade80] text-[#4ade80] rounded-md font-mono font-bold text-lg hover:bg-[#39d353]/10 transition-colors duration-300"
+          >
+            View My Work
+          </motion.a>
+        </motion.div>
       </div>
 
-
-      <div className="hidden md:block md:w-2/5 p-4">
-        <div className="bg-gray-800 rounded-lg p-4 font-mono text-sm shadow-lg">
-          <pre>
-            <code className="text-gray-400">
-              <span className="text-purple-400">const</span>{' '}
-              <span className="text-blue-300">profile</span> = {'{\n'}
-              {'  '}<span className="text-green-300">degree</span>: <span className="text-orange-300">' Btech in Electronics and Comm. Eng.'</span>,
-              {'\n  '}<span className="text-green-300">college</span>: <span className="text-orange-300">'Government Eng. college Thrissur'</span>,
-              {'\n  '}<span className="text-green-300">school</span>: <span className="text-orange-300">'Kendriya Vidyalaya Ottapalam'</span>,
-              {'\n  '}<span className="text-green-300">likes</span>: <span className="text-gray-400">[</span>
-              {'\n    '}<span className="text-orange-300">'New Challenges'</span>,
-              {'\n    '}<span className="text-orange-300">'Watching sky'</span>
-              {'\n  '}<span className="text-gray-400">]</span>
-              {'\n}'};
-            </code>
-          </pre>
-        </div>
+      {/* Right Column: Profile Photo */}
+      <div className="w-full md:w-2/5 flex justify-center md:justify-end p-4">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="relative group"
+        >
+            {/* TODO: REPLACE THIS IMAGE SOURCE 
+               1. Put your photo in the 'public' folder and name it 'profile.jpg'
+               2. Or change the src below to your specific path
+            */}
+            <div className="w-64 h-64 md:w-80 md:h-80 relative">
+                {/* Decorative border ring */}
+                <div className="absolute inset-0 rounded-full border-4 border-[#4ade80] opacity-80 group-hover:scale-105 transition-transform duration-300"></div>
+                
+                {/* The Image */}
+                <img 
+                    src="/profile.jpg" 
+                    alt="Krishna Mohan" 
+                    className="w-full h-full object-cover rounded-full shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500 border-4 border-[#0d1117]"
+                    // Fallback if image not found
+                    onError={(e) => {e.target.src = 'https://placehold.co/400x400/161b22/39d353?text=KM'}}
+                />
+            </div>
+        </motion.div>
       </div>
 
-    </div>
+    </section>
   );
 }
 

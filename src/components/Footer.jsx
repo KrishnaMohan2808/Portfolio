@@ -3,16 +3,18 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-dark-bg border-t border-gray-700 py-8 mt-16">
+    <footer className="relative bg-dark-bg border-t border-gray-700 pt-10 pb-6 mt-20">
+
+      {/* Animated top gradient line */}
+      <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-accent via-accent-hover to-accent animate-gradient-x"></div>
+
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
 
-        {/* Left Section Logo */}
-        <div className="text-accent font-mono text-xl font-bold mb-4 md:mb-0">
+        <div className="text-accent font-mono text-xl font-bold mb-6 md:mb-0">
           &lt;Krishna /&gt;
         </div>
 
-        {/* Center Links */}
-        <div className="flex space-x-6 font-mono mb-4 md:mb-0">
+        <div className="flex space-x-6 font-mono mb-6 md:mb-0">
           <a href="#about" className="hover:text-accent-hover transition-colors">
             // About
           </a>
@@ -24,7 +26,6 @@ function Footer() {
           </a>
         </div>
 
-        {/* Social Icons */}
         <div className="flex space-x-6 text-lg">
           <a
             href="https://github.com/your-github"
@@ -53,10 +54,10 @@ function Footer() {
         </div>
       </div>
 
-      {/* Bottom Divider */}
-      <div className="text-center text-sm text-gray-500 font-mono mt-6">
+      <p className="text-center text-sm text-gray-500 font-mono mt-8">
         © {new Date().getFullYear()} Krishna — Built with passion & code.
-      </div>
+      </p>
+
     </footer>
   );
 }
