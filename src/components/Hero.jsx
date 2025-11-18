@@ -57,11 +57,11 @@ function Hero() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-xl md:text-2xl font-mono text-[#4ade80] mb-4">
-            Hi, my name is
+            Hello World, I'm
           </h2>
           
           <h1 className="text-5xl md:text-7xl font-bold text-[#4ade80] mb-4 tracking-tight">
-            KRISHNA MOHAN
+            Krishna Mohan.
           </h1>
           
           <div className="text-xl md:text-3xl font-bold font-mono text-[#8b949e] h-20 md:h-auto flex items-center justify-center md:justify-start">
