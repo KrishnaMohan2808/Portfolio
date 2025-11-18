@@ -3,13 +3,13 @@ import React from 'react';
 // UPDATED: Using numeric values (1-10) to generate ASCII bars
 const skills = [
   { tech: 'Python', value: 9 },
-  { tech: 'Java', value: 7 },
-  { tech: 'JavaScript', value: 8 },
+  { tech: 'Java', value: 6},
+  { tech: 'JavaScript', value: 7 },
   { tech: 'React', value: 7 },
-  { tech: 'Tailwind', value: 8 },
+  { tech: 'Tailwind', value: 7 },
   // { tech: 'Node.js', value: 6 },
   { tech: 'Arduino', value: 7 },
-  { tech: 'MATLAB', value: 5 },
+  { tech: 'MATLAB', value: 8 },
   { tech: 'Docker', value: 4 }
 
 ];
@@ -23,7 +23,7 @@ const getBar = (value) => {
 
 function About() {
   return (
-    <section id="contact" className="container mx-auto p-4 py-16">
+    <section id="about" className="container mx-auto p-4 py-16">
 
       {/* Title */}
       <h2 className="text-4xl font-bold font-mono text-center text-accent mb-8">

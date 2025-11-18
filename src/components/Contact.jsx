@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaMedium } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
+import { SiHuggingface, SiLeetcode } from 'react-icons/si';
 
 function Contact() {
   return (
@@ -68,7 +68,7 @@ function Contact() {
             <FaGithub size={32} />
           </a>
           <a 
-            href="in/krishnamohan2808" 
+            href="https://www.linkedin.com/in/krishnamohan2808/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-accent transition-colors duration-300"
@@ -76,7 +76,7 @@ function Contact() {
             <FaLinkedin size={32} />
           </a>
           <a 
-            href="mailto:your-email@example.com" // Change this
+            href="mailto:krishnamohan2808@gmail.com" 
             className="text-gray-400 hover:text-accent transition-colors duration-300"
           >
             <FaEnvelope size={32} />
@@ -96,6 +96,14 @@ function Contact() {
             className="text-gray-400 hover:text-accent transition-colors duration-300"
           >
             <SiLeetcode size={32} />
+          </a>
+          <a 
+            href="https://huggingface.co/krishnamohan2808" // Change this
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-accent transition-colors duration-300"
+          >
+            <SiHuggingface size={32} />
           </a>
         </div>
       </div>
