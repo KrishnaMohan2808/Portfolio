@@ -19,7 +19,7 @@ function Contact() {
         </p>
 
  <form 
-  action="3d09b3e3d094b36caf20f95bf17b99d0" 
+  action="https://formsubmit.co/krishnamohan2808@gmail.com" 
   method="POST"
   className="flex flex-col gap-4"
 >
