@@ -31,7 +31,7 @@ function Contact() {
     name="_subject" 
     value="New Message From Portfolio Contact Form!" 
   />
-  <input type="hidden" name="_next" value="http://localhost:5173/#contact" />
+  <input type="hidden" name="_next" value="https://krishnahere.vercel.app/#contact" />
 
 
 
