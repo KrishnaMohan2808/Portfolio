@@ -7,6 +7,7 @@ const skills = [
   { tech: 'JavaScript', value: 7 },
   { tech: 'React', value: 7 },
   { tech: 'Tailwind', value: 7 },
+  { tech: 'Django', value: 6 },
   // { tech: 'Node.js', value: 6 },
   { tech: 'Arduino', value: 7 },
   { tech: 'MATLAB', value: 8 },
