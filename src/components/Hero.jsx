@@ -68,7 +68,7 @@ function Hero() {
           </div>
 
           <p className="text-lg text-[#8b949e] mt-6 max-w-xl mx-auto md:mx-0 leading-relaxed">
-            By degree, I'm an electronics engineer. By nature, I'm an experimenter.
+            By degree, I'm an engineer. By nature, I'm an experimenter.
             I love to take on new challenges, get my hands dirty, and learn new things
             from the ground up.
           </p>
