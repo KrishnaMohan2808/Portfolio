@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 import AnimatedSection from './components/AnimatedSection';
 import About from './components/About';
 import Footer from './components/Footer';
-
+import Experience from './components/Experience';
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -51,6 +51,10 @@ return (
         <About />
       </AnimatedSection>
 
+      <AnimatedSection>
+        <Experience />
+      </AnimatedSection>
+
     
       <AnimatedSection>
         <Projects />
@@ -59,6 +63,8 @@ return (
       <AnimatedSection>
         <Contact />
       </AnimatedSection>
+
+
 
       <Footer />
 
